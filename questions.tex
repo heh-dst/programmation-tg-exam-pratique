@@ -6,9 +6,9 @@
 
 \usepackage[lang=FR,box,noshuffle,noshufflegroups,automarks,separateanswersheet]{automultiplechoice}
 \usepackage{hyperref}
-\title{Questions bidons}
-\newcommand{\thesubtitle}{Examen blanc du \thedate{}}
-\date{08/02/2024}
+\title{Nom du cours}
+\newcommand{\thesubtitle}{Interro sommative du \thedate{}}
+\date{08/10/2024}
 \author{François ROLAND}
 \hypersetup{
   pdftitle={\thetitle},
@@ -24,6 +24,8 @@
 \AMCrandomseed{1}
 \AMCsetFoot{\thepage{}}
 
+\setlength{\parindent}{0pt}
+
 \begin{document}
 
 %%% preparation of the groups
@@ -33,108 +35,111 @@
 
 %%% questions (available snippets: mcsa[h|mc], gra, igs)
 \element{q01}{
-  \begin{question}{q01.1}
-    Quelle est la couleur du cheval blanc d'Henri IV~?
-    \begin{multicols}{2}
-      \begin{choices}
-        \correctchoice{blanc}
-        \wrongchoice{noir}
-        \wrongchoice{jaune}
-        \wrongchoice{rouge}
-        \lastchoices{}\columnbreak{}
-        \wrongchoice{\textsc{aucune}}
-        \wrongchoice{\textsc{toutes}}
-        \wrongchoice{\textsc{manque}}
-        \wrongchoice{\textsc{absurdité}}
-      \end{choices}
-    \end{multicols}
-  \end{question}
+	\begin{question}{q01.1}
+		Quelle est la couleur du cheval blanc d'Henri IV~?
+		\begin{multicols}{2}
+			\begin{choices}
+				\correctchoice{blanc}
+				\wrongchoice{noir}
+				\wrongchoice{jaune}
+				\wrongchoice{rouge}
+				\lastchoices{}\columnbreak{}
+				\wrongchoice{\textsc{aucune}}
+				\wrongchoice{\textsc{toutes}}
+				\wrongchoice{\textsc{manque}}
+				\wrongchoice{\textsc{absurdité}}
+			\end{choices}
+		\end{multicols}
+	\end{question}
 }
 
 %%% copies
 
 \begin{examcopy}[2]
-  \setcounter{figure}{0}
-  %%% beginning of the header
-  \noindent{\bf \thetitle{} \hfill{} \thesubtitle{}}
+	\setcounter{figure}{0}
+	%%% beginning of the header
+	{\bf \thetitle{} \hfill{} \thesubtitle{}}
 
-  \vspace{2ex}
+	\vspace{2ex}
 
-  Durée~: 60~minutes.
+	Durée~: 60~minutes.
 
-  Aucun document n'est autorisé.
-  La possession d'un objet électronique (smartphone, montre, écouteurs\ldots{}) pendant l'examen est interdite.
+	Aucun document n'est autorisé.
+	Avoir un objet électronique (smartphone, montre, écouteurs\ldots{}) à portée de main pendant l'examen sera considéré comme une tentative de fraude.
 
-  Commencez toujours par indiquer lisiblement vos nom et prénom sur la feuille de réponse.
+	Commencez toujours par indiquer lisiblement votre nom et votre prénom sur la feuille de réponse.
 
-  Chaque question à choix multiple comporte \textbf{une} (et \textbf{une seule}) solution correcte.
-  Certaines de ces solutions, appelées solutions générales, font appel à votre vigilance.
-  \begin{itemize}
-    \item \textsc{aucune} = aucune des solutions spécifiques n'est correcte.
-    \item \textsc{toutes} = toutes les solutions spécifiques sont correctes.
-    \item \textsc{manque} = il est impossible de répondre parce que l'information (au moins une donnée) manque dans l'énoncé de la question (donc pas dans le cours ni dans la connaissance actuelle du problème).
-    \item \textsc{absurdité} = une absurdité dans l'énoncé rend toute la question sans objet (par exemple, une contrevérité dans l'énoncé).
-  \end{itemize}
-  Attention~! La réponse \textsc{absurdité} a priorité sur les autres solutions générales et, évidemment, sur les réponses spécifiques à la question.
+	À Chaque question correspond \textbf{une} (et \textbf{une seule}) solution correcte.
+	Certaines de ces solutions, appelées solutions générales, font appel à votre vigilance.
+	\begin{itemize}
+		\item \textsc{aucune} = aucune des solutions spécifiques n'est correcte.
+		\item \textsc{toutes} = toutes les solutions spécifiques sont correctes.
+		\item \textsc{manque} = il est impossible de répondre parce que l'information (au moins une donnée) manque dans l'énoncé de la question (donc pas dans le cours ni dans la connaissance actuelle du problème).
+		\item \textsc{absurdité} = une absurdité dans l'énoncé rend toute la question sans objet (par exemple, une contrevérité dans l'énoncé).
+	\end{itemize}
+	Attention~! La réponse \textsc{absurdité} a priorité sur les autres solutions générales et, évidemment, sur les réponses spécifiques à la question.
 
-  Une réponse correcte rapporte 1~point.
-  Une réponse incorrecte, absente ou mal codée, rapporte 0~point.
+	Chaque réponse correcte rapporte 1~point. Chaque réponse incorrecte, absente ou mal codée, 0~point.
 
-  Vous pouvez inscrire ce que vous voulez sur le questionnaire et les feuilles de brouillon, mais seule la feuille de réponse sera corrigée.
-  Vous devez rendre toutes les feuilles reçues, y compris celles de brouillon, à la fin de votre évaluation.
+	Vous pouvez inscrire ce que vous voulez sur le questionnaire et les feuilles de brouillon, car seule la feuille de réponse sera corrigée.
+	Vous devez rendre toutes les feuilles reçues, y compris celles de brouillon, à la fin de votre évaluation.
 
-  \noindent{\hrulefill{}}
+	\hrulefill{}
 
-  \vspace{2ex}
+	\vspace{2ex}
 
-  %%% end of the header
+	%%% end of the header
 
-  \cleargroup{all}
+	\cleargroup{all}
 
-  %%% copy question groups to the all group for randomization (available snippet: cgr)
-  \copygroup[1]{q01}{all}
+	%%% copy question groups to the all group for randomization (available snippet: cgr)
+	\copygroup[1]{q01}{all}
 
-  \insertgroup{all}
+	\insertgroup{all}
 
-  \clearpage{}
+	\clearpage{}
 
-  \begin{center}
-    {\large{Feuille de brouillon}}
-  \end{center}
+	\begin{center}
+		{\large{Feuille de brouillon}}
+	\end{center}
 
-  \AMCcleardoublepage{}
+	\AMCcleardoublepage{}
 
-  \AMCformBegin{}
+	\AMCformBegin{}
 
-  \noindent{\begin{minipage}{.47\linewidth}
-      {\bf \thetitle{} \\ \thesubtitle{}}
+	\begin{center}\Large Feuille de réponse\end{center}
 
-      {\large Feuille de réponse}
-    \end{minipage}%
-    \hfill{}%
-    \namefield{\fbox{\begin{minipage}{.47\linewidth}%
-          {\footnotesize Nom et prénom \par}%
-          \vspace{\baselineskip}\namefielddots{}%
-          \vspace*{1mm}%
-        \end{minipage}}}}
+	{\bf \thetitle{}\hspace*{\fill}\thesubtitle{}}
 
-  \vspace{2ex}
+	\vspace{1em}
 
-  Utilisez \textbf{uniquement} un \textbf{bic bleu ou noir}, jamais d'autre couleur, ni de crayon, ni de feutre.
+	\begin{tabular}{@{}p{.6\textwidth}@{\hspace{.05\textwidth}}p{.35\textwidth}@{}}
+		Nom et prénom                                                                 & Matricule (si vous le connaissez) \\
 
-  \textbf{Noircissez entièrement une seule case par question}.
+		\namefield{\fbox{\begin{minipage}{\linewidth}%
+					                 \vspace{1cm}\namefielddots{}%
+					                 \vspace*{1mm}%
+				                 \end{minipage}}} & \hfill{}\AMCcodeGridInt[top]{Matricule}{6}\vspace{1ex}
+	\end{tabular}
 
-  En cas de modification de votre réponse, utilisez toujours un ruban correcteur.
-  Ne retracez jamais le contour d'une case ou sa lettre.
-  N'entourez jamais de case.
+	\vspace{1em}
 
-  \noindent{\hrulefill{}}
+	Utilisez uniquement un \textbf{bic bleu ou noir} standard, pas d'autre couleur, ni de crayon, ni de feutre.
 
-  \vspace{2ex}
-  %%% end of the answer sheet header
+	\textbf{Noircissez entièrement une seule case par question}.
 
-  \AMCform{}
-  \AMCcleardoublepage{}
+	Pour modifier votre réponse, utilisez du correcteur (liquide ou en ruban).
+	Ne retracez jamais ni le contour d'une case ni sa lettre.
+	N'entourez pas de case.
+  Les éventuelles zones grisées sont réservées à la correction.
+
+	\hrulefill{}
+
+	\vspace{1em}
+	%%% end of the answer sheet header
+
+	\AMCform{}
+	\AMCcleardoublepage{}
 
 \end{examcopy}
 
