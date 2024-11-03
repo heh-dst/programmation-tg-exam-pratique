@@ -6,7 +6,7 @@ Auto-Multiple-Choice project template.
 - VSCode
 - VSCode Dev Containers extension 
 
-## Isage
+## Usage
 To use it, open a terminal and type `auto-multiple-choice`.
 
 If the AMC window doesn't open, navigate to http://localhost:6900/vnc.html in your browser.
