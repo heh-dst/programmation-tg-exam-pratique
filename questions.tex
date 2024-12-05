@@ -1,11 +1,11 @@
-%%AMC:latex_engine=xelatex --shell-escape
+\documentclass[12pt,french,a4paper,oneside]{article}
 
-\documentclass[11pt,french,a4paper,twoside]{article}
-
-\usepackage{array,enumitem,graphicx,listings,multicol,multirow,titling,hyphenat,booktabs}
+\usepackage{amsmath,booktabs,graphicx,multicol,titling}
 
 \usepackage[lang=FR,box,noshuffle,noshufflegroups,automarks,separateanswersheet]{automultiplechoice}
+
 \usepackage{hyperref}
+
 \title{Nom du cours}
 \newcommand{\thesubtitle}{Interro sommative du \thedate{}}
 \date{08/10/2024}
@@ -15,10 +15,19 @@
   pdfauthor={\theauthor},
   pdflang={fr-BE},
   hidelinks}
+
 \usepackage{fontspec}
-\usepackage{libertine}
+\usepackage[sfdefault]{roboto}
+\usepackage{roboto-mono}
+
+\usepackage{setspace}
+\onehalfspacing{}
+
+\usepackage[locale=FR]{siunitx}
+
 \usepackage{polyglossia}
 \setdefaultlanguage{french}
+
 \usepackage{csquotes}
 
 \AMCrandomseed{1}
@@ -44,10 +53,10 @@
 				\wrongchoice{jaune}
 				\wrongchoice{rouge}
 				\lastchoices{}\columnbreak{}
-				\wrongchoice{\textsc{aucune}}
-				\wrongchoice{\textsc{toutes}}
-				\wrongchoice{\textsc{manque}}
-				\wrongchoice{\textsc{absurdité}}
+				\wrongchoice{aucune}
+				\wrongchoice{toutes}
+				\wrongchoice{manque}
+				\wrongchoice{absurdité}
 			\end{choices}
 		\end{multicols}
 	\end{question}
@@ -60,35 +69,52 @@
 	%%% beginning of the header
 	{\bf \thetitle{} \hfill{} \thesubtitle{}}
 
-	\vspace{2ex}
-
 	Durée~: 60~minutes.
 
-	Aucun document n'est autorisé.
-	Avoir un objet électronique (smartphone, montre, écouteurs\ldots{}) à portée de main pendant l'examen sera considéré comme une tentative de fraude.
+	\vspace{1em}
 
-	Commencez toujours par indiquer lisiblement votre nom et votre prénom sur la feuille de réponse.
+	\begin{center}
+		\fbox{Ne tournez pas cette page avant d'en avoir reçu l'autorisation.}
+	\end{center}
 
-	À Chaque question correspond \textbf{une} (et \textbf{une seule}) solution correcte.
-	Certaines de ces solutions, appelées solutions générales, font appel à votre vigilance.
+	\vspace{1em}
+
+	\textbf{\Large{}Consignes}
+
 	\begin{itemize}
-		\item \textsc{aucune} = aucune des solutions spécifiques n'est correcte.
-		\item \textsc{toutes} = toutes les solutions spécifiques sont correctes.
-		\item \textsc{manque} = il est impossible de répondre parce que l'information (au moins une donnée) manque dans l'énoncé de la question (donc pas dans le cours ni dans la connaissance actuelle du problème).
-		\item \textsc{absurdité} = une absurdité dans l'énoncé rend toute la question sans objet (par exemple, une contrevérité dans l'énoncé).
+		\item Indiquer lisiblement votre nom et votre prénom sur la \textbf{feuille de réponse} qui se trouve à la fin du formulaire.
+		\item À chaque question correspond \textbf{une} (et \textbf{une seule}) réponse correcte.
+		\item En plus des réponses spécifiques, des réponses générales font appel à votre vigilance.
+		      Ces réponses générales sont~:
+		      \begin{description}
+			      \item[aucune] aucune réponse spécifique n'est correcte.
+			      \item[toutes] toutes les réponses spécifiques sont correctes.
+			      \item[manque] il manque au moins une information \textbf{dans l'énoncé} pour répondre à la question.
+			      \item[absurdité] une absurdité s'est glissée \textbf{dans l'énoncé} et rend toute la question sans objet.
+		      \end{description}
+		      La réponse \textbf{absurdité} a priorité sur les autres réponses, générales ou spécifiques.
+		\item Chaque réponse correcte vaut 1~point. Il n'y a pas de point négatif.
+		\item Seule la feuille de réponse sera corrigée.
+		      Vous pouvez donc écrire au recto et au verso des feuilles de question et sur les feuilles de brouillon.
+		\item Sur la \textbf{feuille de réponse}, remplissez complètement la case correspondant à votre réponse.
+		\item Utilisez uniquement un \textbf{bic bleu} ou \textbf{noir} standard non-effaçable pour faciliter l'archivage et la lecture optique.
+		\item Pour modifier votre réponse, utilisez du correcteur (liquide ou en ruban).
+		\item Les éventuelles zones grisées sont réservées à la correction.
 	\end{itemize}
-	Attention~! La réponse \textsc{absurdité} a priorité sur les autres solutions générales et, évidemment, sur les réponses spécifiques à la question.
 
-	Chaque réponse correcte rapporte 1~point. Chaque réponse incorrecte, absente ou mal codée, 0~point.
+	\vfill{}
 
-	Vous pouvez inscrire ce que vous voulez sur le questionnaire et les feuilles de brouillon, car seule la feuille de réponse sera corrigée.
-	Vous devez rendre toutes les feuilles reçues, y compris celles de brouillon, à la fin de votre évaluation.
+	\begin{center}
+		\fbox{Ne tournez pas cette page avant d'en avoir reçu l'autorisation.}
+	\end{center}
 
-	\hrulefill{}
-
-	\vspace{2ex}
+	\clearpage{}
 
 	%%% end of the header
+
+	\textbf{\Large{}Questions}
+
+	\vspace{1em}
 
 	\cleargroup{all}
 
@@ -103,7 +129,7 @@
 		{\large{Feuille de brouillon}}
 	\end{center}
 
-	\AMCcleardoublepage{}
+	\clearpage{}
 
 	\AMCformBegin{}
 
@@ -113,33 +139,18 @@
 
 	\vspace{1em}
 
-	\begin{tabular}{@{}p{.6\textwidth}@{\hspace{.05\textwidth}}p{.35\textwidth}@{}}
-		Nom et prénom                                                                 & Matricule (si vous le connaissez) \\
-
-		\namefield{\fbox{\begin{minipage}{\linewidth}%
-					                 \vspace{1cm}\namefielddots{}%
-					                 \vspace*{1mm}%
-				                 \end{minipage}}} & \hfill{}\AMCcodeGridInt[top]{Matricule}{6}\vspace{1ex}
-	\end{tabular}
+	Nom et prénom \\
+	\namefield{\fbox{\begin{minipage}{\linewidth}%
+				\vspace{1cm}\namefielddots{}%
+				\vspace*{1mm}%
+			\end{minipage}}}
 
 	\vspace{1em}
 
-	Utilisez uniquement un \textbf{bic bleu ou noir} standard, pas d'autre couleur, ni de crayon, ni de feutre.
-
-	\textbf{Noircissez entièrement une seule case par question}.
-
-	Pour modifier votre réponse, utilisez du correcteur (liquide ou en ruban).
-	Ne retracez jamais ni le contour d'une case ni sa lettre.
-	N'entourez pas de case.
-  Les éventuelles zones grisées sont réservées à la correction.
-
-	\hrulefill{}
-
-	\vspace{1em}
 	%%% end of the answer sheet header
 
 	\AMCform{}
-	\AMCcleardoublepage{}
+	\clearpage{}
 
 \end{examcopy}
 

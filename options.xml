@@ -44,7 +44,7 @@ Regards.</email_text>
   <modele_regroupement>(ID)</modele_regroupement>
   <moteur_latex_b>xelatex --shell-escape</moteur_latex_b>
   <name_field_type></name_field_type>
-  <nom_examen>Informations de bienvenue</nom_examen>
+  <nom_examen>Nom du cours</nom_examen>
   <nombre_copies>0</nombre_copies>
   <note_arrondi>inf</note_arrondi>
   <note_grain>1</note_grain>
@@ -63,8 +63,8 @@ Regards.</email_text>
   <regroupement_compose>0</regroupement_compose>
   <regroupement_copies>ALL</regroupement_copies>
   <regroupement_type>STUDENTS</regroupement_type>
-  <seuil>0.10</seuil>
-  <seuil_up>0.9</seuil_up>
+  <seuil>0.45</seuil>
+  <seuil_up>1</seuil_up>
   <subjectemail>
     <email_subject>Exam question</email_subject>
     <email_text>Please find enclosed your question sheet.
