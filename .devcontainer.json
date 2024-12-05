@@ -48,7 +48,7 @@
             "args": [
               "-synctex=1",
               "-silent",
-              "-xelatex",
+              "-lualatex",
               "-interaction=nonstopmode",
               "-file-line-error",
               "-outdir=%OUTDIR%",

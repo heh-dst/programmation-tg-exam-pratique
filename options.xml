@@ -42,7 +42,7 @@ Regards.</email_text>
   <listeetudiants>%PROJET/ENORA.csv</listeetudiants>
   <maj_bareme>1</maj_bareme>
   <modele_regroupement>(ID)</modele_regroupement>
-  <moteur_latex_b>xelatex --shell-escape</moteur_latex_b>
+  <moteur_latex_b>lualatex --shell-escape</moteur_latex_b>
   <name_field_type></name_field_type>
   <nom_examen>Nom du cours</nom_examen>
   <nombre_copies>0</nombre_copies>
