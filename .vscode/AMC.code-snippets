@@ -57,7 +57,7 @@
       "\\element{${1:q000}}{",
       "  \\begin{question}{${2:identifier}}",
       "    ${3:question}~?",
-      "    \\begin{multicols}{2}",
+      "    \\begin{multicols}{2}\\AMCBoxedAnswers",
       "      \\begin{choices}",
       "        \\correctchoice{${4:right answer}}",
       "        \\wrongchoice{${5:distractor}}$0",
