@@ -8,11 +8,11 @@
 Regards.</email_text>
     <email_use_html></email_use_html>
   </annotatedemail>
-  <annote_position>marges</annote_position>
+  <annote_position>zones</annote_position>
   <annote_rtl></annote_rtl>
   <assoc_code>ID</assoc_code>
   <auto_capture_mode>0</auto_capture_mode>
-  <code_examen>DATE-CLASS</code_examen>
+  <code_examen>DATE-interro sommative</code_examen>
   <cr>cr</cr>
   <data>data</data>
   <doc_catalog>DOC-catalog.pdf</doc_catalog>
@@ -44,11 +44,11 @@ Regards.</email_text>
   <modele_regroupement>(ID)</modele_regroupement>
   <moteur_latex_b>lualatex --shell-escape</moteur_latex_b>
   <name_field_type></name_field_type>
-  <nom_examen>Nom du cours</nom_examen>
+  <nom_examen>UE</nom_examen>
   <nombre_copies>0</nombre_copies>
-  <note_arrondi>inf</note_arrondi>
-  <note_grain>1</note_grain>
-  <note_max>100</note_max>
+  <note_arrondi>normal</note_arrondi>
+  <note_grain>0.5</note_grain>
+  <note_max>20</note_max>
   <note_max_plafond>1</note_max_plafond>
   <note_min></note_min>
   <note_null>0</note_null>

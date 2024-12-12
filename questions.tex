@@ -21,7 +21,7 @@
 
 \usepackage{csquotes}
 
-\usepackage[asbox,automarks,box,lang=FR,noshuffle,noshufflegroups,separateanswersheet]{automultiplechoice}
+\usepackage[asbox,automarks,box,catalog,lang=FR,noshuffle,noshufflegroups,separateanswersheet]{automultiplechoice}
 \AMCboxStyle{size=2ex,down=.3ex}
 \AMCnumericOpts{decimals=2,digits=3,exponent=1,sign=false,exact=20,approx=100,Tpoint={\raisebox{1ex}{\bf ,}}}
 \AMCrandomseed{1}
@@ -51,7 +51,7 @@
 \element{q01}{
 	\begin{question}{q01.1}
 		Quelle est la couleur du cheval blanc d'Henri IV~?
-		\begin{multicols}{2}
+		\begin{multicols}{2}\AMCBoxedAnswers{}
 			\begin{choices}
 				\correctchoice{blanc}
 				\wrongchoice{noir}
