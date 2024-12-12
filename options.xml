@@ -26,7 +26,7 @@ Regards.</email_text>
   <export_csv_columns>student.copy,student.key,student.name</export_csv_columns>
   <export_csv_separateur>;</export_csv_separateur>
   <export_csv_ticked></export_csv_ticked>
-  <export_include_abs></export_include_abs>
+  <export_include_abs>1</export_include_abs>
   <export_ncols>2</export_ncols>
   <export_ods_columns>student.copy,student.key,student.name</export_ods_columns>
   <export_ods_group>0</export_ods_group>
@@ -38,8 +38,8 @@ Regards.</email_text>
   <filter>latex</filter>
   <filtered_source>DOC-filtered.tex</filtered_source>
   <format_export>ods</format_export>
-  <liste_key>ID</liste_key>
-  <listeetudiants>%PROJET/ENORA.csv</listeetudiants>
+  <liste_key>Matricule</liste_key>
+  <listeetudiants>%PROJET/Etudiants.csv</listeetudiants>
   <maj_bareme>1</maj_bareme>
   <modele_regroupement>(ID)</modele_regroupement>
   <moteur_latex_b>lualatex --shell-escape</moteur_latex_b>
