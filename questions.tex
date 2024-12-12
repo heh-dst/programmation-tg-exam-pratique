@@ -1,39 +1,44 @@
 \documentclass[12pt,french,a4paper,oneside]{article}
 
-\usepackage{amsmath,booktabs,graphicx,multicol,titling}
+\usepackage{amsmath,booktabs,fontspec,graphicx,multicol,polyglossia,setspace,siunitx,titling,tikz}
 
-\usepackage[lang=FR,box,noshuffle,noshufflegroups,automarks,separateanswersheet]{automultiplechoice}
+\date{2024-12-31} % chktex 8
+\title{Interro sommative du  \thedate{}}
+\newcommand{\thesubtitle}{UE -- section} % chktex 8
+\author{François ROLAND}
+
+\usepackage[sfdefault]{roboto}
+\usepackage{roboto-mono}
+\usepackage[mathrm=sym]{unicode-math}
+\setmathfont{Fira Math}
+
+\sisetup{
+  locale=FR,
+  per-mode=fraction
+}
+
+\setdefaultlanguage{french}
+
+\usepackage{csquotes}
+
+\usepackage[asbox,automarks,box,lang=FR,noshuffle,noshufflegroups,separateanswersheet]{automultiplechoice}
+\AMCboxStyle{size=2ex,down=.3ex}
+\AMCnumericOpts{decimals=2,digits=3,exponent=1,sign=false,exact=20,approx=100,Tpoint={\raisebox{1ex}{\bf ,}}}
+\AMCrandomseed{1}
+\AMCsetFoot{\thepage{}}
+\AMCsetScoreZoneAnswerSheet{position=margins}
 
 \usepackage{hyperref}
-
-\title{Nom du cours}
-\newcommand{\thesubtitle}{Interro sommative du \thedate{}}
-\date{08/10/2024}
-\author{François ROLAND}
 \hypersetup{
   pdftitle={\thetitle},
   pdfauthor={\theauthor},
   pdflang={fr-BE},
   hidelinks}
 
-\usepackage{fontspec}
-\usepackage[sfdefault]{roboto}
-\usepackage{roboto-mono}
-
-\usepackage{setspace}
 \onehalfspacing{}
-
-\usepackage[locale=FR]{siunitx}
-
-\usepackage{polyglossia}
-\setdefaultlanguage{french}
-
-\usepackage{csquotes}
-
-\AMCrandomseed{1}
-\AMCsetFoot{\thepage{}}
-
 \setlength{\parindent}{0pt}
+
+\newcommand{\fillin}{\makebox[2cm]{\hrulefill{}}}
 
 \begin{document}
 
@@ -65,11 +70,12 @@
 %%% copies
 
 \begin{examcopy}[2]
+	\begin{tikzpicture}[remember picture, overlay]
+		\node[anchor=south west, xshift=-2mm, yshift=0.3cm] at (0,0) {\includegraphics[height=48pt]{Logo-HEH-DST.png}};
+	\end{tikzpicture}
 	\setcounter{figure}{0}
 	%%% beginning of the header
 	{\bf \thetitle{} \hfill{} \thesubtitle{}}
-
-	Durée~: 60~minutes.
 
 	\vspace{1em}
 
@@ -82,6 +88,7 @@
 	\textbf{\Large{}Consignes}
 
 	\begin{itemize}
+		\item Durée maximale~: \qty{60}{\minute} (\qty{45}{\minute} + \qty{15}{\minute} pour PAI).
 		\item Indiquer lisiblement votre nom et votre prénom sur la \textbf{feuille de réponse} qui se trouve à la fin du formulaire.
 		\item À chaque question correspond \textbf{une} (et \textbf{une seule}) réponse correcte.
 		\item En plus des réponses spécifiques, des réponses générales font appel à votre vigilance.
