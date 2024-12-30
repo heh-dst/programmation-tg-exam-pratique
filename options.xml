@@ -71,7 +71,7 @@ Regards.</email_text>
 Regards.</email_text>
     <email_use_html></email_use_html>
   </subjectemail>
-  <texsrc>%PROJET/questions.tex</texsrc>
+  <texsrc>%PROJET/questionnaire.tex</texsrc>
   <verdict>%(ID)
 Note: %s/%m (score total: %S/%M)</verdict>
   <verdict_q>&quot;%s/%m&quot;</verdict_q>

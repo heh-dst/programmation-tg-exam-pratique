@@ -1,0 +1,42 @@
+% !TeX root = questionnaire.tex
+\usepackage{amsmath,booktabs,enumitem,fontspec,graphicx,multicol,polyglossia,setspace,siunitx,titling,tikz}
+
+\date{2024-12-31} % chktex 8
+\title{Examen}
+\newcommand{\thesubtitle}{UE -- section} % chktex 8
+\author{François ROLAND}
+
+\usepackage[sfdefault]{roboto}
+\usepackage{roboto-mono}
+\usepackage[mathrm=sym]{unicode-math}
+\setmathfont{Fira Math}
+
+\sisetup{
+	locale=FR,
+	per-mode=fraction
+}
+
+\setdefaultlanguage{french}
+
+\usepackage{csquotes}
+
+\usepackage[asbox,automarks,box,lang=FR,noshuffle,noshufflegroups,separateanswersheet]{automultiplechoice}
+\AMCboxStyle{size=2ex,down=.3ex}
+\AMCrandomseed{1}
+\AMCsetFoot{\thepage{}}
+\AMCsetScoreZoneAnswerSheet{position=margins}
+\setdefaultgroupmode{withoutreplacement}
+
+\usepackage{hyperref}
+\hypersetup{
+	pdftitle={\thetitle},
+	pdfauthor={\theauthor},
+	pdflang={fr-BE},
+	hidelinks}
+
+\onehalfspacing{}
+\setlength{\parindent}{0pt}
+
+\newcommand{\fillin}{\makebox[2cm]{\hrulefill{}}}
+\newcommand{\pagetitle}[1]{\textbf{\Large{#1}}}
+\newcommand{\insertdraftpage}{\clearpage{}\pagetitle{Brouillon}\clearpage{}}
