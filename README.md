@@ -4,10 +4,14 @@ Auto-Multiple-Choice project template.
 ## Prerequisites:
 - Docker
 - VSCode
-- VSCode Dev Containers extension 
+- VSCode Dev Containers extension
 
 ## Usage
-To use it, open a terminal and type `auto-multiple-choice`.
+The files to modify are~:
+- [questionbank.tex](questionbank.tex)
+- [questions.tex](questions.tex)
+
+Then, to start the GUI, open a terminal and type `auto-multiple-choice`.
 
 If the AMC window doesn't open, navigate to http://localhost:6900/vnc.html in your browser.
 The noVNC default password is `vscode`.
