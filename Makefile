@@ -1,5 +1,5 @@
 BUILD := ./out
-SRCS := questionnaire.tex settings.tex cover.tex questionbank.tex questions.tex answersheet.tex
+SRCS := questionnaire.tex settings.tex cover.tex
 LATEXMK=latexmk
 LATEXMKFLAGS=-file-line-error -interaction=batchmode -outdir=$(BUILD) --shell-escape -silent -synctex=1 -lualatex
 
