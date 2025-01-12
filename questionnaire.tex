@@ -1,4 +1,5 @@
 \documentclass[12pt,addpoints,french,a4paper,oneside]{exam}
+% chktex-file 19
 
 \input{settings.tex}
 
@@ -6,12 +7,107 @@
 \pagestyle{foot}
 \include{cover.tex}
 
-\begin{questions}
-	\fullwidth{\section*{Questions}}
+\section*{Polygones réguliers}
 
-	\question[3] Énoncé de la question 1.
-	\question[2] Énoncé de la question 2.
-	\question[3] Énoncé de la question 3.
+\subsection*{Contexte}
+
+Il est possible de construire n'importe quel polygone régulier à l'aide d'un cercle.
+Pour cela, il suffit de diviser le cercle en autant de parties égales que le polygone a de côtés.
+Chaque sommet du polygone régulier est alors un point d'intersection entre le cercle et une droite passant par le centre du cercle.
+Par exemple, pour un triangle équilatéral, on divise le cercle en trois parties égales.
+L'angle au centre \(\theta{}\) vaut alors \(\frac{\ang{360}}{3} = \ang{120}\).
+Pour un carré on a \(\frac{\ang{360}}{4} = \ang{90}\), pour un pentagone \(\frac{\ang{360}}{5} = \ang{72}\), et ainsi de suite.
+
+\begin{center}
+	\begin{tikzpicture}
+		\coordinate (T) at (0,0);
+		\path (T) +(0:2.5cm) coordinate (A) (T) +(120:2.5cm) coordinate (B);
+		\path[help lines] pic["\footnotesize\ang{120}",draw,fill=gray!30,angle eccentricity=1.7,angle radius=0.4cm] {angle = A--T--B};
+		\draw[help lines,dashed] (T) circle (2.5cm);
+		\fill[help lines] (T) circle (2pt);
+		\draw[help lines,dashed] foreach \angle in {0, 120, 240}{ (T) -- +(\angle:2.5cm) };
+		\draw[thick] (T) ++(0:2.5cm)
+		foreach \angle in {0, 120, 240}{ -- (\angle:2.5cm) }
+		-- cycle;
+
+		\coordinate (S) at (5.5,0);
+		\path (S) +(0:2.5cm) coordinate (A) (S) +(90:2.5cm) coordinate (B);
+		\path[help lines] pic["\footnotesize\ang{90}",draw,fill=gray!30,angle eccentricity=1.8,angle radius=0.4cm] {angle = A--S--B};
+		\draw[help lines,dashed] (S) circle (2.5cm);
+		\fill[help lines] (S) circle (2pt);
+		\draw[help lines,dashed] foreach \angle in {0, 90, 180, 270}{ (S) -- +(\angle:2.5cm) };
+		\draw[thick] (S) +(0:2.5cm)
+		foreach \angle in {0, 90, 180, 270}{ -- +(\angle:2.5cm) }
+		-- cycle;
+
+		\coordinate (P) at (11,0);
+		\path (P) +(0:2.5cm) coordinate (A) (P) +(72:2.5cm) coordinate (B);
+		\path[help lines] pic["\footnotesize\ang{72}",draw,fill=gray!30,angle eccentricity=1.8,angle radius=0.4cm] {angle = A--P--B};
+		\draw[help lines,dashed] (P) circle (2.5cm);
+		\fill[help lines] (P) circle (2pt);
+		\draw[help lines,dashed] foreach \angle in {0, 72, 144, 216, 288}{ (P) -- +(\angle:2.5cm) };
+		\draw[thick] (P) +(0:2.5cm)
+		foreach \angle in {0, 72, 144, 216, 288}{ -- +(\angle:2.5cm) }
+		-- cycle;
+	\end{tikzpicture}
+\end{center}
+
+Si \(n\) est le nombre de côtés du polygone, \(r\) le rayon du cercle et \(\theta{}\) l'angle au centre, la surface \(S\) d'un polygone régulier vaut~:
+\begin{equation*}
+	S = \frac{n r^2 \sin\left(\theta{}\right)}{2}
+\end{equation*}
+
+Rappelons également que les coordonnées cartésiennes \(\left(x, y\right)\) d'un point dont les coordonnées polaires sont \(\left(r, \theta{}\right)\)~ s'obtiennent à l'aide des formules suivantes~:
+\begin{align*}
+	x & = r \cos\left(\theta{}\right) \\
+	y & = r \sin\left(\theta{}\right)
+\end{align*}
+
+\subsection*{Consignes}
+
+\begin{enumerate}
+	\item Vous devez créer un programme C qui permet de caluler les coordonnées cartésiennes de chaque sommet d'un polygone régulier ainsi que sa surface.
+	\item Le programme doit demander à l'utilisateur le nombre de côtés du polygone et le rayon du cercle dès son démarrage.
+	\item Une fois les données saisies, le programme doit~:
+	      \begin{enumerate}
+		      \item Calculer les coordonnées cartésiennes et les stocker dans un tableau.
+		      \item Calculer la surface du polygone.
+		      \item Afficher les coordonnées cartésiennes et la surface à l'utilisateur.
+	      \end{enumerate}
+	\item Après l'affichage des données, le programme doit afficher un menu qui permet à l'utilisateur de~:
+	      \begin{enumerate}
+		      \item Modifier le nombre de côtés du polygone et le rayon du cercle.
+		      \item Quitter le programme.
+	      \end{enumerate}
+	\item A tout moment, si l'utilisateur saisit une donnée incorrecte (par exemple, une lettre au lieu d'un nombre ou un nombre négatif), le programme doit afficher un message d'erreur et demander à l'utilisateur de saisir à nouveau la donnée.
+\end{enumerate}
+
+\subsection*{Barème d'évaluation}
+
+\begin{questions}
+
+	\titledquestion{Fonctionnement} Fonctionnement du code
+	\begin{parts}
+		\part[2] Saisie initiale
+		\part[3] Menu
+		\part[3] Calcul des coordonnées cartésiennes
+		\part[2] Calcul de la surface
+	\end{parts}
+
+	\titledquestion{Lisibilité} Lisibilité du code
+	\begin{parts}
+		\part[2] Indentation et cohérence des espaces et retours à la ligne
+		\part[2] Noms de variables et de fonctions
+		\part[1] Pertinence des commentaires
+	\end{parts}
+
+	\titledquestion{Design} Design du code
+	\begin{parts}
+		\part[2] Utilisation des structures de contrôle (boucles et conditions)
+		\part[1] Découpage en fonctions
+		\part[1] Structures de données
+		\part[1] Absence de code inutile
+	\end{parts}
 
 \end{questions}
 
@@ -19,12 +115,14 @@
 
 \thispagestyle{headandfoot}
 
-\section*{Évaluation}
+\section*{Évaluation de l'examen pratique}
 
-\subsection*{Points}
+Cette page est réservée à l'évaluateur. Merci de ne rien y écrire en dehors de la date et de votre nom.
+
+\subsection*{Récapitulatif des points}
 
 \begin{center}
-	\gradetable[h][questions]
+	\gradetable[v][questions]
 \end{center}
 
 \subsection*{Commentaires}
