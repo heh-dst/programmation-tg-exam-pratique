@@ -1,0 +1,113 @@
+\documentclass[11pt,french,a4paper,twoside]{scrartcl}
+
+\usepackage{amsmath,booktabs,fontspec,graphicx,minted,polyglossia,setspace,siunitx,titling,tikz,xcolor}
+
+\date{2025-01-12} % chktex 8
+\title{Correction examen pratique}
+\newcommand{\thesubtitle}{Programmation -- Bachelier en Techniques graphiques} % chktex 8
+\author{François ROLAND}
+
+\usepackage[sfdefault]{roboto}
+\usepackage{roboto-mono}
+\usepackage[mathrm=sym]{unicode-math}
+\setmathfont{Fira Math}
+
+\sisetup{
+	locale=FR,
+	per-mode=fraction
+}
+
+\setminted{
+  autogobble=true,
+  breaklines=true,
+  fontsize=\footnotesize,
+  linenos=true,
+  stepnumber=5,
+  tabsize=2
+}
+
+\setdefaultlanguage{french}
+
+\usepackage{csquotes}
+
+\usepackage{hyperref}
+\hypersetup{
+	pdftitle={\thetitle},
+	pdfauthor={\theauthor},
+	pdflang={fr-BE},
+	hidelinks}
+
+\onehalfspacing{}
+
+\begin{document}
+\noindent{}%
+\begin{tikzpicture}[remember picture, overlay]
+	\node[anchor=south west, xshift=-4.4mm, yshift=0.5cm] at (0,0) {\includegraphics[height=48pt]{Logo-HEH-DST.png}};
+\end{tikzpicture}%
+\noindent{}%
+\noindent{}%
+\textbf{\thetitle{} \hfill{} \thesubtitle{}}
+
+\vspace{1em}
+
+\section{Tests fonctionnels}
+
+Ces tests doivent permettre de vérifier le bon fonctionnement du programme de l'étudiant.
+
+\begin{enumerate}
+	\item Demandez à l'étudiant de compiler son code et vérifiez que le programme démarre  pour vous assurez que le code exécuté est bien le code affiché dans l'éditeur.
+	\item Vérifiez les résultats pour un triangle dont le cercle circonscrit a un rayon de \num{1}.
+	      \begin{description}
+		      \item[Sommets] \(\left(\num{1.00}, \num{0.00}\right)\); \(\left(\num{-0.50}, \num{0.87}\right)\); \(\left(\num{-0.50}, \num{-0.87}\right)\)
+		      \item[Surface] \(\num{1.30}\)
+	      \end{description}
+	\item Vérifiez les résultats pour un carré dont le cercle circonscrit a un rayon de \num{1.5}.
+	      \begin{description}
+		      \item[Sommets] \(\left(\num{1.50}, \num{0.00}\right)\); \(\left(\num{-0.00}, \num{1.50}\right)\); \(\left(\num{-1.50}, \num{-0.00}\right)\); \(\left(\num{0.00}, \num{-1.50}\right)\)
+		      \item[Surface] \(\num{4.50}\)
+	      \end{description}
+	\item Vérifiez les résultats pour un pentagone dont le cercle circonscrit a un rayon de \num{2}.
+	      \begin{description}
+		      \item[Sommets] \(\left(\num{2.00}, \num{0.00}\right)\); \(\left(\num{0.62}, \num{1.90}\right)\); \(\left(\num{-1.62}, \num{1.18}\right)\); \(\left(\num{-1.62}, \num{-1.18}\right)\); \(\left(\num{0.62}, \num{-1.90}\right)\)
+		      \item[Surface] \(\num{9.51}\)
+	      \end{description}
+	\item Vérifiez les résultats pour un polygone à 12 côtés dont le cercle circonscrit a un rayon de \num{3}.
+	      \begin{description}
+		      \item[Sommets] \(\left(\num{3.00}, \num{0.00}\right)\); \(\left(\num{2.60}, \num{1.50}\right)\); \(\left(\num{1.50}, \num{2.60}\right)\); \(\left(\num{-0.00}, \num{3.00}\right)\); \(\left(\num{-1.50}, \num{2.60}\right)\); \(\left(\num{-2.60}, \num{1.50}\right)\); \(\left(\num{-3.00}, \num{-0.00}\right)\); \(\left(\num{-2.60}, \num{-1.50}\right)\); \(\left(\num{-1.50}, \num{-2.60}\right)\); \(\left(\num{0.00}, \num{-3.00}\right)\); \(\left(\num{1.50}, \num{-2.60}\right)\); \(\left(\num{2.60}, \num{-1.50}\right)\)
+		      \item[Surface] \(\num{27.00}\)
+	      \end{description}
+	\item Essayez de saisir les valeurs suivantes pour le nombre de côtés et vérifiez que le programme les rejette avec un message d'erreur~: \num{-2}; \num{2}; \textquote{abc}; \num{3.1}.
+	\item Essayez de saisir les valeurs suivantes pour le rayon du cercle et vérifiez que le programme les rejette avec un message d'erreur~: \num{-2}; \num{0}; \textquote{abc}.
+	\item Vérifiez que le menu fonctionne permet de calculer un nouveau polygone et de quitter le programme.
+\end{enumerate}
+
+\section{Lecture du code}
+
+\subsection{Fonctionnement}
+\begin{enumerate}
+	\item Vérifiez que le programme utilise bien un tableau pour stocker les coordonnées cartésiennes et les afficher.
+\end{enumerate}
+
+\subsection{Lisibilité}
+\begin{enumerate}
+	\item Indentation et cohérence des espaces et retours à la ligne
+	\item Noms de variables et de fonctions
+	\item Pertinence des commentaires
+\end{enumerate}
+
+\subsection{Design}
+\begin{enumerate}
+	\item Utilisation des structures de contrôle (boucles et conditions)
+	\item Découpage en fonctions
+	\item Structures de données
+	\item Absence de code inutile
+\end{enumerate}
+
+
+\section{Résolu}
+
+\begin{singlespace}
+	\inputminted{C}{sources/polygons.c}
+\end{singlespace}
+
+\end{document}
